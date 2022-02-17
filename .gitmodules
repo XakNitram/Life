@@ -1,0 +1,6 @@
+[submodule "extern/GLFW"]
+	path = extern/GLFW
+	url = https://github.com/glfw/glfw.git
+[submodule "extern/Glad"]
+	path = extern/Glad
+	url = git@github.com:XakNitram/Glad.git
