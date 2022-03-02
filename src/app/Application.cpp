@@ -422,7 +422,7 @@ int run(int width, int height) {
     int motionEvents = 0;
 
     //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-    for(intptr_t frameCount = 0; window.shouldClose(); ++frameCount) {
+    for(intptr_t frameCount = 0; !window.shouldClose(); ++frameCount) {
         Window::update();
 
         while (std::optional<Event> possible = window.pollEvent()) {
