@@ -401,9 +401,9 @@ int run(int width, int height) {
             Severity severity, unsigned int id, int length,
             const char *message, const void *userState
         ) {
-            //if (type != Type::OTHER) {
-            std::cout << "[OpenGL] " << message << std::endl;
-            //}
+            if (type != Type::OTHER) {
+                std::cout << "[OpenGL] " << message << std::endl;
+            }
         }
     );
 #endif
@@ -466,11 +466,11 @@ int run(int width, int height) {
         }
 
         if (startedDrag && finishedDrag) {
-            if (motionEvents < 1) {
-                std::cout << "Click at (" << dragEndX << ", " << dragEndY << ")." << std::endl;
-            } else {
-                std::cout << "Drag ending at (" << dragEndX << ", " << dragEndY << ") with " << motionEvents << " path points." << std::endl;
-            }
+            //if (motionEvents < 1) {
+            //    std::cout << "Click at (" << dragEndX << ", " << dragEndY << ")." << std::endl;
+            //} else {
+            //    std::cout << "Drag ending at (" << dragEndX << ", " << dragEndY << ") with " << motionEvents << " path points." << std::endl;
+            //}
             startedDrag = finishedDrag = false;
             motionEvents = 0;
         }
